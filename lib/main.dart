@@ -42,6 +42,7 @@ class SummaryScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.network('https://image.tmdb.org/t/p/w500${movie.urlImagen}'),
             Text('Detalles de la película: ${movie.title}'),
             Text('Cantidad de entradas: $ticketCount'),
             Text('Precio total: $totalPrice Bs.'),
@@ -66,6 +67,8 @@ class MovieItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
+        leading:
+            Image.network('https://image.tmdb.org/t/p/w500${movie.urlImagen}'),
         title: Text(movie.title),
         subtitle: Text('Descripción de la película'),
         trailing: Row(
